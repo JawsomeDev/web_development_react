@@ -26,3 +26,5 @@ class Employee extends Person{
     this.salary = salary;
   }
 }
+
+console.log(Employee);
