@@ -21,7 +21,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './App17.jsx'
 // import MyList from './MyList'
 // import MyTable from './MyTable'
-import MyForm from './MyForm2'
+import MyForm from './Myform4'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
