@@ -5,6 +5,10 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar  from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AddItem from './components/AddItem';
+// 쇼핑 항목을 표시하는 목록 관련 Component 들을 import 
+import List  from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
 
 export type Item = {
@@ -31,6 +35,18 @@ function App() {
           </Toolbar>
         </AppBar>
         <AddItem addItem={addItem}/>
+
+        <List>
+          {
+            items.map((item, index) => 
+              <ListItem key={index} divider>
+                <ListItemText
+                  primary={item.product}
+                  secondary={item.amount}/>
+              </ListItem>
+            )
+          }
+        </List>
       </Container>
     </>
   )
