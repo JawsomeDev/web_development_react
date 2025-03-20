@@ -1,7 +1,5 @@
-import { use } from "react";
-import { Children } from "react";
+// Context API 이용하기 위한 import
 import { createContext, useState } from "react";
-
 
 const data = [
   {
@@ -36,15 +34,15 @@ const data = [
   },
 ];
 
-//createContext()를 사용하여 context 객체 생성
+// createContext()를 사용하여 context 객체 생성
 const KPopContext = createContext();
 
-// Provider 컴폰너트를 리턴하는 KPopContextProvider를 생성
+// Provider 컴포넌트를 리턴하는 KPopContextProvider를 생성
 const KPopContextProvider = ({children}) => {
-  const [ playlist, setPlayList] = useState(data);
+  const [playlist, setPlaylist] = useState(data);
 
   return (
-    <KPopContext.Provider value={{data, playlist, setPlayList}}>
+    <KPopContext.Provider value={{data, playlist, setPlaylist}}>
       {children}
     </KPopContext.Provider>
   );
